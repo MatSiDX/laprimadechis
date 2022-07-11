@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/82a228b425.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/png" th:href="@{/assets/logo.png}" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="m-0 vh-100 row justify-content-center align-items-center ">
+            <form method="POST" th:action="@{/login}" class="w-25 border-2 p-5 rounded-start">
+                <img  class="mx-auto d-block" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Escudo_de_Chaclacayo.png/1200px-Escudo_de_Chaclacayo.png" width="50%"/>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">USUARIO</label>
+                    <input type="text" class="form-control" id="username" name="username">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label ">CONTRASEÑA</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>                
+                <div  class="d-grid gap-2 h-auto mb-3 d-flex justify-content-center" >                    
+                    <input  type="submit" value="Iniciar sesión" class="btn" style="background-color: rgb(247,180,0)">
+                </div> 
+            </form>
+            
+            
+            <a th:href="@{/lista/all}" class="btn btn-secondary"> go</a>
+        </div>
+        
+    </body>
+</html>
